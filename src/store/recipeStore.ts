@@ -43,7 +43,7 @@ export const useRecipeStore = create<RecipeStoreType>()(
     error: null,
     hasLoadedRecipes: false,
 
-    fetchRecipes: async (page: number) => {
+    fetchRecipes: async (page) => {
       set({ loading: true });
       try {
         const res = await fetch(`${process.env.REACT_APP_API_URL}beers?page=${page}`);
@@ -64,7 +64,7 @@ export const useRecipeStore = create<RecipeStoreType>()(
       set({ hasLoadedRecipes: true });
     },
 
-    selectRecipe: (recipeId: number) => {
+    selectRecipe: (recipeId) => {
       set((state) => {
         const isSelected = state.selectedRecipes.includes(recipeId);
         const selectedRecipes = isSelected
@@ -92,7 +92,7 @@ export const useRecipeStore = create<RecipeStoreType>()(
       });
     },
 
-    getRecipe: (recipeId: string) => {
+    getRecipe: (recipeId) => {
       const { recipes } = get();
       const foundRecipe = recipes.find((recipe) => recipe.id === +recipeId);
 
