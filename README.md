@@ -24,8 +24,8 @@ list (but still 15 recipes should be rendered).
 
 ___
 
-<!-- <div id="socials" align="center">
-	<a href=""  >
+<div id="socials" align="center">
+	<a href="https://test-task-airo-medical-one.vercel.app/"  >
 		<b> > > > P r e v i ew < < < </h2>
 	</a>
-</div> -->
+</div>
